@@ -2,6 +2,7 @@ import prateekImg from "./assets/prateek-prasoon.png";
 import company1 from "./assets/company-1.svg";
 import company2 from "./assets/company-2.svg";
 import facebookLogo from "./assets/facebook-logo.svg";
+import { useState } from "react";
 
 const posts = [
   {
@@ -174,65 +175,12 @@ const App = () => {
           <div className="flex-1"></div>
         </div>
 
-        <div className="mt-16 flex flex-wrap justify-center gap-y-8 lg:justify-between w-full ">
+        <div className="mt-16 flex flex-wrap justify-center gap-8 lg:gap-10 xl:gap-14  w-full ">
           {posts && posts.map((post) => <PostItem key={post.id} {...post} />)}
         </div>
       </section>
 
-      <section className="primary_container mt-6 md:mt-10">
-        <h4 className="text-center text-3xl lg:text-[43px] font-semibold font-outFit">
-          Reach out to Prateek Prasoon
-        </h4>
-
-        <form
-          action=""
-          className="max-w-4xl mx-auto flex flex-col gap-y-4 py-10 md:py-16"
-        >
-          <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-6">
-            <div className="flex-1 flex gap-4">
-              <InputBtn label="Name" />
-              <input
-                type="text"
-                className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
-              />
-            </div>
-            <div className="flex-1 flex gap-4">
-              <InputBtn label="Number" />
-              <input
-                type="text"
-                className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
-              />
-            </div>
-          </div>
-          <div className="flex-1 flex gap-4">
-            <InputBtn label="Email" />
-            <input
-              type="text"
-              className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
-            />
-          </div>
-          <div className="flex-1 flex gap-4">
-            <InputBtn label="Message" />
-            <input
-              type="text"
-              className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
-            />
-          </div>
-
-          <div className="w-full flex items-center justify-center mt-2 lg:mt-4">
-            <button
-              className="bg-[#181818] h-[42px] w-[120px] rounded-[57px] text-white font-medium text-sm md:text-base"
-              type="button"
-              style={{
-                boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
-                transform: "translate(2px, 2px)",
-              }}
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-      </section>
+      <ContactForm />
 
       <section className="bg-[#2E2E2E] h-28 px-20 flex items-center">
         <div className="flex gap-2">
@@ -278,6 +226,90 @@ function InputBtn({ label }) {
     <div className="bg-[#181818] text-white rounded-[57px] md:w-[120px] w-[100px] h-[42px] font-medium flex items-center justify-center font-outFit text-sm md:text-base">
       {label}
     </div>
+  );
+}
+
+function ContactForm() {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (event) => {
+    console.log("called");
+    event.preventDefault();
+
+    const formData = { name, number, email, message };
+    console.log(formData);
+  };
+  return (
+    <section className="primary_container mt-6 md:mt-10">
+      <h4 className="text-center text-3xl lg:text-[43px] font-semibold font-outFit">
+        Reach out to Prateek Prasoon
+      </h4>
+
+      <form
+        action=""
+        className="max-w-4xl mx-auto flex flex-col gap-y-4 py-10 md:py-16"
+        onSubmit={handleSubmit}
+      >
+        <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-6">
+          <div className="flex-1 flex gap-4">
+            <InputBtn label="Name" />
+            <input
+              type="text"
+              value={name}
+              required
+              onChange={(e) => setName(e.target.value)}
+              className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
+            />
+          </div>
+          <div className="flex-1 flex gap-4">
+            <InputBtn label="Number" />
+            <input
+              type="text"
+              required
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+              className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
+            />
+          </div>
+        </div>
+        <div className="flex-1 flex gap-4">
+          <InputBtn label="Email" />
+          <input
+            type="email"
+            value={email}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
+          />
+        </div>
+        <div className="flex-1 flex gap-4">
+          <InputBtn label="Message" />
+          <input
+            type="text"
+            value={message}
+            required
+            onChange={(e) => setMessage(e.target.value)}
+            className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
+          />
+        </div>
+
+        <div className="w-full flex items-center justify-center mt-2 lg:mt-4">
+          <button
+            className="bg-[#181818] h-[42px] w-[120px] rounded-[57px] text-white font-medium text-sm md:text-base"
+            type="submit"
+            style={{
+              boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
+              transform: "translate(2px, 2px)",
+            }}
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
   );
 }
 
