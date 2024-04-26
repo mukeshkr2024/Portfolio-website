@@ -2,6 +2,9 @@ import prateekImg from "./assets/prateek-prasoon.png";
 import company1 from "./assets/company-1.svg";
 import company2 from "./assets/company-2.svg";
 import facebookLogo from "./assets/facebook-logo.svg";
+import instagramLogo from "./assets/instagram-logo.svg";
+import twitterLogo from "./assets/twitter-logo.svg";
+
 import { useState } from "react";
 
 const posts = [
@@ -191,10 +194,10 @@ const App = () => {
             <img src={facebookLogo} alt="" className="size-8" />
           </a>
           <a className="size-9 bg-white rounded-full flex items-center justify-center">
-            <img src={facebookLogo} alt="" className="size-8" />
+            <img src={twitterLogo} alt="" className="size-8" />
           </a>
           <a className="size-9 bg-white rounded-full flex items-center justify-center">
-            <img src={facebookLogo} alt="" className="size-8" />
+            <img src={instagramLogo} alt="" className="size-8" />
           </a>
         </div>
       </section>
