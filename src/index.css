@@ -8,4 +8,7 @@
   .bg-primary {
     @apply bg-[#FFFFFF];
   }
+  .primary_container {
+    @apply px-6 sm:px-12 md:px-16 xl:px-20 py-10;
+  }
 }

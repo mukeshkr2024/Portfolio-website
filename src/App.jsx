@@ -32,22 +32,23 @@ const posts = [
 
 const App = () => {
   return (
-    <div className="">
+    <div className="w-full overflow-hidden">
       {/* main section  */}
-      <section className=" h-screen px-20 py-10">
-        <div className=" h-28">
+      <section className="lg:h-screen primary_container ">
+        <div className="lg:h-28 h-24">
           <span className="text-[28px] uppercase font-normal">
             Prateek Prasoon
           </span>
         </div>
-        <div className="flex w-full">
+
+        <div className="flex flex-col lg:flex-row w-full">
           <div className="flex-1">
-            <div className="max-w-lg flex flex-col gap-y-6">
-              <h4 className="text-[53px] font-semibold font-outFit lg:leading-[71.4px]">
+            <div className="max-w-lg flex flex-col lg:gap-y-6 gap-y-6">
+              <h4 className="lg:text-[53px] text-5xl font-semibold font-outFit lg:leading-[71.4px]">
                 I help fill your business gaps{" "}
               </h4>
 
-              <h5 className="text-[38px] font-medium text-[#5D5D5D] font-outFit">
+              <h5 className="lg:text-[38px] font-medium text-2xl text-[#5D5D5D] font-outFit">
                 Saving your day, Every day.
               </h5>
 
@@ -59,7 +60,7 @@ const App = () => {
 
               <div className="flex w-full items-start gap-6 font-openSans">
                 <button
-                  className="w-[180px] h-[55px] bg-[#181818] rounded-[50px] text-white font-bold text-xl"
+                  className="lg:w-[180px] w-[160px] h-[50px] lg:h-[55px] bg-[#181818] rounded-[50px] text-white font-bold text-base lg:text-xl"
                   style={{
                     boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
                     transform: "translate(2px, 2px)",
@@ -68,7 +69,7 @@ const App = () => {
                   Book a call
                 </button>
                 <button
-                  className="w-[180px] h-[55px] border-2 border-[#04080A] text-xl font-bold rounded-[50px]"
+                  className="lg:w-[180px] w-[160px] h-[50px] lg:h-[55px] border-2 border-[#04080A] text-base lg:text-xl font-bold rounded-[50px]"
                   style={{
                     boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
                     transform: "translate(2px, 2px)",
@@ -79,23 +80,23 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center  ">
+          <div className="flex-1 flex items-center justify-center mt-8 lg:mt-0">
             <img
               src={prateekImg}
               alt="Prateek Prasoon"
-              className="w-full -mt-14 -mr-16"
+              className="w-full lg:-mt-14 lg:-mr-16"
             />
           </div>
         </div>
       </section>
 
-      <section className="bg-[#F3F3F1] w-full px-20 py-10 ">
-        <div className="w-full flex">
+      <section className="bg-[#F3F3F1] w-full primary_container ">
+        <div className="w-full flex flex-col lg:flex-row">
           <div className="flex-1">
-            <h5 className="text-[#000000] text-[48px] font-medium font-outFit">
+            <h5 className="text-[#000000] lg:text-[48px] text-[35px] font-medium font-outFit">
               Prateek Prasoon
             </h5>
-            <div className="text-[19px] font-normal mt-10 flex flex-col gap-y-6 text-[#4E4E4E] font-openSans">
+            <div className="text-[19px] font-normal mt-4 lg:mt-10 flex flex-col gap-y-6 text-[#4E4E4E] font-openSans">
               <p>
                 CloudPrism Solutions isn&apos;t just a workplace—it&apos;s a
                 community. Here, you&apos;re not just an employee; you&apos;re a
@@ -111,7 +112,7 @@ const App = () => {
             </div>
           </div>
           <div className="flex-1 flex justify-center">
-            <div className="bg-[#D9D9D9] w-[400px] h-[353px] -mt-10"></div>
+            <div className="bg-[#D9D9D9] w-[400px] h-[353px] mt-10 lg:-mt-10"></div>
           </div>
         </div>
 
@@ -121,17 +122,18 @@ const App = () => {
         </div>
       </section>
 
-      <section className="bg-[#2E2E2E] h-[430px] w-full px-20">
-        <div className="size-[400px] bg-white rounded-[18px] "></div>
+      <section className="bg-[#2E2E2E] h-[430px] w-full primary_container flex justify-center sm:justify-start">
+        {/* <div className="size-[400px] bg-white rounded-[18px] "></div> */}
+        <div className="size-[350px] md:size-[450px] bg-white rounded-3xl md:-mt-20"></div>
       </section>
 
-      <section className="px-20 py-10">
-        <div className="flex w-full">
+      <section className="primary_container">
+        <div className="flex w-full flex-col lg:flex-row">
           <div className="flex-1">
-            <h5 className="text-[50px] font-semibold font-outFit">
+            <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
               How CloudPrism can help you?
             </h5>
-            <div className="mt-10 text-[20px]  flex flex-col gap-y-6 text-[#4E4E4E] font-openSans">
+            <div className="md:mt-10 mt-6 text-[20px]  flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
               <p>
                 CloudPrism Solutions isn&apos;t just a workplace—it&apos;s a
                 community. Here, you&apos;re not just an employee; you&apos;re a
@@ -149,12 +151,12 @@ const App = () => {
           <div className="flex-1"></div>
         </div>
 
-        <div className="flex w-full mt-10">
+        <div className="flex w-full flex-col lg:flex-row mt-10">
           <div className="flex-1">
-            <h5 className="text-[50px] font-semibold font-outFit">
-              How Coding Commando can help you?{" "}
+            <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
+              How CloudPrism can help you?
             </h5>
-            <div className="mt-10 text-[20px] text-[#4E4E4E] flex flex-col gap-y-6 font-openSans">
+            <div className="md:mt-10 mt-6 text-[20px]  flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
               <p>
                 CloudPrism Solutions isn&apos;t just a workplace—it&apos;s a
                 community. Here, you&apos;re not just an employee; you&apos;re a
@@ -172,21 +174,21 @@ const App = () => {
           <div className="flex-1"></div>
         </div>
 
-        <div className="mt-16 flex flex-wrap justify-between w-full ">
+        <div className="mt-16 flex flex-wrap justify-center gap-y-8 lg:justify-between w-full ">
           {posts && posts.map((post) => <PostItem key={post.id} {...post} />)}
         </div>
       </section>
 
-      <section className="mt-10">
-        <h4 className="text-center text-[43px] font-semibold font-outFit">
+      <section className="primary_container mt-6 md:mt-10">
+        <h4 className="text-center text-3xl lg:text-[43px] font-semibold font-outFit">
           Reach out to Prateek Prasoon
         </h4>
 
         <form
           action=""
-          className="max-w-4xl mx-auto flex flex-col gap-y-4 py-16"
+          className="max-w-4xl mx-auto flex flex-col gap-y-4 py-10 md:py-16"
         >
-          <div className="flex-1  flex gap-6">
+          <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-6">
             <div className="flex-1 flex gap-4">
               <InputBtn label="Name" />
               <input
@@ -217,9 +219,9 @@ const App = () => {
             />
           </div>
 
-          <div className="w-full flex items-center justify-center mt-4">
+          <div className="w-full flex items-center justify-center mt-2 lg:mt-4">
             <button
-              className="bg-[#181818] h-[42px] w-[120px] rounded-[57px] text-white font-medium"
+              className="bg-[#181818] h-[42px] w-[120px] rounded-[57px] text-white font-medium text-sm md:text-base"
               type="button"
               style={{
                 boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
@@ -273,7 +275,7 @@ function PostItem({ title, description }) {
 
 function InputBtn({ label }) {
   return (
-    <div className="bg-[#181818] text-white rounded-[57px] w-[120px] h-[42px] font-medium flex items-center justify-center font-outFit">
+    <div className="bg-[#181818] text-white rounded-[57px] md:w-[120px] w-[100px] h-[42px] font-medium flex items-center justify-center font-outFit text-sm md:text-base">
       {label}
     </div>
   );
