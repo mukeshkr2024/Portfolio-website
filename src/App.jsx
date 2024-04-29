@@ -1,22 +1,20 @@
-import prateekImg from "./assets/prateek-prasoon.png";
-import facebookLogo from "./assets/facebook-logo.svg";
-import instagramLogo from "./assets/instagram-logo.svg";
-import twitterLogo from "./assets/twitter-logo.svg";
-import lindeinLogo from "./assets/linkdein-logo.svg";
-import salesforceParnter from "./assets/salesforce-partner.png";
-import salesforceCup from "./assets/salesforce-cup.png";
+import { useState } from "react";
 import codingCommando from "./assets/coding-commando.png";
-import reviewStar from "./assets/review-star.svg";
-import salesforceArchitect from "./assets/salesforce-architect.png";
+import facebookLogo from "./assets/facebook-logo.svg";
 import company1 from "./assets/icons/icon-1.png";
 import company2 from "./assets/icons/icon-2.png";
 import company3 from "./assets/icons/icon-3.png";
 import company4 from "./assets/icons/icon-4.png";
 import company5 from "./assets/icons/icon-5.png";
 import company6 from "./assets/icons/icon-6.png";
-import footerImg from "./assets/footer-1.png";
-
-import { useState } from "react";
+import instagramLogo from "./assets/instagram-logo.svg";
+import lindeinLogo from "./assets/linkdein-logo.svg";
+import prateekImg from "./assets/prateek-prasoon.svg";
+import reviewStar from "./assets/review-star.svg";
+import salesforceArchitect from "./assets/salesforce-architect.png";
+import salesforceCup from "./assets/salesforce-cup.png";
+import salesforceParnter from "./assets/salesforce-partner.png";
+import twitterLogo from "./assets/twitter-logo.svg";
 
 const posts = [
   {
@@ -68,10 +66,22 @@ const App = () => {
     <div className="w-full overflow-hidden">
       {/* main section  */}
       <section className="lg:h-screen primary_container ">
-        <div className="lg:h-28 h-24">
+        <div className="lg:h-28 h-24 w-full flex justify-between items-start">
           <span className="text-[28px] uppercase font-normal">
             Prateek Prasoon
           </span>
+
+          <button
+            className="bg-[#181818] rounded-[50px]"
+            style={{
+              boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
+              transform: "translate(2px, 2px)",
+            }}
+          >
+            <p className="text-xl font-openSans text-white font-bold py-2.5 px-10 ">
+              Reach out
+            </p>
+          </button>
         </div>
 
         <div className="flex flex-col lg:flex-row w-full">
@@ -149,7 +159,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-wrap justify-between my-10 ">
+        <div className="w-full flex flex-wrap justify-between my-10 gap-3 ">
           <img src={company1} alt="" className="object-contain" />
           <img src={company2} alt="" className="object-contain" />
           <img src={company3} alt="" className="object-contain" />
@@ -168,7 +178,7 @@ const App = () => {
       </div>
 
       <section className="primary_container !bg-[#F9FEFF] ">
-        <div className="flex flex-wrap justify-between my-8">
+        <div className="flex flex-wrap justify-between gap-8 my-2 md:my-8">
           {reviews &&
             reviews.map((item) => (
               <ReviewCard key={item.id} description={item.description} />
@@ -177,12 +187,12 @@ const App = () => {
       </section>
 
       <section className="primary_container">
-        <div className="flex w-full flex-col lg:flex-row">
+        <div className="flex w-full flex-col lg:flex-row gap-y-8">
           <div className="flex-1">
             <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
               About CloudPrism Solutions{" "}
             </h5>
-            <div className="md:mt-10 mt-6 text-[20px]  flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
+            <div className="md:mt-10 mt-6 text-[20px] flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
               <p>
                 Cloudprism stands out from the crowd of software startups.
                 Located in the heart of Patna City, India, we&apos;ve grown by
@@ -199,15 +209,15 @@ const App = () => {
               </p>
             </div>
           </div>
-          <div className="flex-2">
-            <div className="w-full  flex flex-col items-end justify-center">
-              <img src={salesforceParnter} alt="" />
-              <img src={salesforceCup} alt="" />
+          <div className="flex-2 ">
+            <div className="w-full flex flex-col items-center lg:items-end justify-center">
+              <img src={salesforceParnter} alt="" className="object-contain" />
+              <img src={salesforceCup} alt="" className="object-contain" />
             </div>
           </div>
         </div>
 
-        <div className="flex w-full flex-col lg:flex-row mt-10">
+        <div className="flex w-full flex-col gap-y-8 lg:flex-row mt-6 md:mt-10">
           <div className="flex-1 ">
             <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
               About Coding Commando{" "}
@@ -232,8 +242,8 @@ const App = () => {
             </div>
           </div>
           <div className="flex-2">
-            <div className="w-full  flex flex-col items-end justify-center">
-              <img src={codingCommando} alt="" />
+            <div className="w-full flex flex-col lg:items-end justify-center">
+              <img src={codingCommando} alt="" className="object-contain" />
             </div>
           </div>
         </div>
@@ -245,9 +255,9 @@ const App = () => {
 
       <ContactForm />
 
-      <footer className="bg-[#000000] primary_container w-full h-44 flex">
-        <div className="flex gap-2.5">
-          <div className="flex-1 flex gap-2">
+      <footer className="bg-[#000000] primary_container">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div className="flex gap-2 md:gap-1.5">
             <a className="">
               <img src={lindeinLogo} alt="" className="size-8 md:size-9" />
             </a>
@@ -264,13 +274,14 @@ const App = () => {
           <div className="flex-1 text-base text-white font-outFit font-normal">
             <p>
               Office no: 917, Gera Imperium Alpha, Rajaram Patil Nagar, Vitthal
-              Nagar, Kharadi, Pune, Maharashtra 411014 +91 7906582439
+              Nagar, Kharadi, Pune, Maharashtra 411014 <br /> +91 7906582439
             </p>
           </div>
           <div className="flex-1 text-base text-white font-outFit font-normal">
             <p>
               Shivpuri Rd, South Shivpuri, Shivpuri, Rajbansi Nagar, Patna,
-              Bihar 800029 +91 83295 53438
+              Bihar 800029 <br />
+              +91 83295 53438
             </p>
           </div>
           <div className="flex-1 text-base text-white font-outFit font-normal">
