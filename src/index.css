@@ -6,9 +6,9 @@
 
 @layer utilities {
   .bg-primary {
-    @apply bg-[#FFFFFF];
+    @apply bg-[#F9FEFF];
   }
   .primary_container {
-    @apply px-6 sm:px-12 md:px-16 xl:px-20 py-10;
+    @apply px-6 sm:px-12 md:px-16 xl:px-24 py-10;
   }
 }
