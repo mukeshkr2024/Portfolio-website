@@ -15,6 +15,7 @@ import salesforceArchitect from "./assets/salesforce-architect.png";
 import salesforceCup from "./assets/salesforce-cup.png";
 import salesforceParnter from "./assets/salesforce-partner.png";
 import twitterLogo from "./assets/twitter-logo.svg";
+import sign from "./assets/sign.svg";
 
 const posts = [
   {
@@ -62,14 +63,22 @@ const reviews = [
 ];
 
 const App = () => {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="w-full overflow-hidden">
       {/* main section  */}
       <section className="lg:h-screen primary_container ">
         <div className="lg:h-28 h-24 w-full flex justify-between items-start">
-          <span className="text-[28px] uppercase font-normal">
+          {/* <span className="text-[28px] uppercase font-normal">
             Prateek Prasoon
-          </span>
+          </span> */}
+          <img src={sign} alt="Prateek Prasoon" />
 
           <button
             className="bg-[#181818] rounded-[50px]"
@@ -77,6 +86,7 @@ const App = () => {
               boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
               transform: "translate(2px, 2px)",
             }}
+            onClick={scrollToBottom}
           >
             <p className="text-xl font-openSans text-white font-bold py-2.5 px-10 ">
               Reach out
@@ -84,51 +94,53 @@ const App = () => {
           </button>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full">
-          <div className="flex-1">
-            <div className="max-w-lg flex flex-col lg:gap-y-6 gap-y-6">
-              <h4 className="lg:text-[53px] text-5xl font-semibold font-outFit lg:leading-[71.4px]">
-                I help fill your business gaps{" "}
-              </h4>
+        <div className="flex justify-center h-full items-center">
+          <div className="flex flex-col lg:flex-row w-full  h-auto ">
+            <div className="flex-1">
+              <div className="max-w-lg flex flex-col lg:gap-y-6 gap-y-6">
+                <h4 className="lg:text-[53px] text-5xl font-semibold font-outFit lg:leading-[71.4px]">
+                  I help fill your business gaps{" "}
+                </h4>
 
-              <h5 className="lg:text-[38px] font-medium text-2xl text-[#5D5D5D] font-outFit">
-                Saving your day, Every day.
-              </h5>
+                <h5 className="lg:text-[38px] font-medium text-2xl text-[#5D5D5D] font-outFit">
+                  Saving your day, Every day.
+                </h5>
 
-              <p className="text-lg font-openSans text-[#4E4E4E]">
-                I understand your firm&apos;s fundamental needs: to either
-                increase revenue, save costs, or save time. I don&apos;t just
-                talk about expertise; I deliver it.
-              </p>
+                <p className="text-lg font-openSans text-[#4E4E4E]">
+                  I understand your firm&apos;s fundamental needs: to either
+                  increase revenue, save costs, or save time. I don&apos;t just
+                  talk about expertise; I deliver it.
+                </p>
 
-              <div className="flex w-full items-start gap-6 font-openSans">
-                <button
-                  className="lg:w-[180px] w-[160px] h-[50px] lg:h-[55px] bg-[#181818] rounded-[50px] text-white font-bold text-base lg:text-xl"
-                  style={{
-                    boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
-                    transform: "translate(2px, 2px)",
-                  }}
-                >
-                  Book a call
-                </button>
-                <button
-                  className="lg:w-[180px] w-[160px] h-[50px] lg:h-[55px] border-2 border-[#04080A] text-base lg:text-xl font-bold rounded-[50px]"
-                  style={{
-                    boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
-                    transform: "translate(2px, 2px)",
-                  }}
-                >
-                  Our Courses
-                </button>
+                <div className="flex w-full items-start gap-6 font-openSans">
+                  <button
+                    className="lg:w-[180px] w-[160px] h-[50px] lg:h-[55px] bg-[#181818] rounded-[50px] text-white font-bold text-base lg:text-xl"
+                    style={{
+                      boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
+                      transform: "translate(2px, 2px)",
+                    }}
+                  >
+                    Book a call
+                  </button>
+                  <button
+                    className="lg:w-[180px] w-[160px] h-[50px] lg:h-[55px] border-2 border-[#04080A] text-base lg:text-xl font-bold rounded-[50px]"
+                    style={{
+                      boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
+                      transform: "translate(2px, 2px)",
+                    }}
+                  >
+                    Our Courses
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex-1 flex items-center justify-center mt-8 lg:mt-0">
-            <img
-              src={prateekImg}
-              alt="Prateek Prasoon"
-              className="w-full lg:-mt-14 lg:-mr-16"
-            />
+            <div className="flex-1 flex items-center justify-center mt-8 lg:mt-0">
+              <img
+                src={prateekImg}
+                alt="Prateek Prasoon"
+                className="w-full lg:-mt-14 lg:-mr-16"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -169,7 +181,7 @@ const App = () => {
         </div>
       </section>
 
-      <div className="w-full">
+      <div className="w-full bg-[#F3F3F1]">
         <img
           src={salesforceArchitect}
           alt=""
@@ -189,24 +201,26 @@ const App = () => {
       <section className="primary_container">
         <div className="flex w-full flex-col lg:flex-row gap-y-8">
           <div className="flex-1">
-            <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
-              About CloudPrism Solutions{" "}
-            </h5>
-            <div className="md:mt-10 mt-6 text-[20px] flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
-              <p>
-                Cloudprism stands out from the crowd of software startups.
-                Located in the heart of Patna City, India, we&apos;ve grown by
-                cultivating a vibrant community and delivering meaningfull
-                impact. With over 50 expert developers, we specialize in
-                Salesforce and Ful stack solutions,ensure custom results that
-                fit your needs and timeline.
-              </p>
-              <p>
-                Our strategy emphasizes sincere communication, integrity, and
-                openness. As a Salesforce Ridge Partner, we offer complete IT
-                solutions and Salesforce knowledge, enabling companies to
-                prosper in the digital environment.
-              </p>
+            <div className="max-w-2xl">
+              <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
+                About CloudPrism Solutions{" "}
+              </h5>
+              <div className="md:mt-10 mt-6 text-[20px] flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
+                <p>
+                  Cloudprism stands out from the crowd of software startups.
+                  Located in the heart of Patna City, India, we&apos;ve grown by
+                  cultivating a vibrant community and delivering meaningfull
+                  impact. With over 50 expert developers, we specialize in
+                  Salesforce and Ful stack solutions,ensure custom results that
+                  fit your needs and timeline.
+                </p>
+                <p>
+                  Our strategy emphasizes sincere communication, integrity, and
+                  openness. As a Salesforce Ridge Partner, we offer complete IT
+                  solutions and Salesforce knowledge, enabling companies to
+                  prosper in the digital environment.
+                </p>
+              </div>
             </div>
           </div>
           <div className="flex-2 ">
@@ -219,26 +233,28 @@ const App = () => {
 
         <div className="flex w-full flex-col gap-y-8 lg:flex-row mt-6 md:mt-10">
           <div className="flex-1 ">
-            <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
-              About Coding Commando{" "}
-            </h5>
-            <div className="md:mt-10 mt-6 text-[20px]  flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
-              <p>
-                Coding Commando, born from CloudPrism&apos;s challenges, is a
-                pioneering platform bridging the gap in Salesforce talent.
-                Founded by Prateek Prasoon, it empowers youth in small-town
-                India with in-demand coding skills and Salesforce expertise. Our
-                affordable, quality education addresses societal gaps in tech
-                awareness, sparking a revolution within Bihar and beyond.
-              </p>
-              <p>
-                With a global reach, we foster sustainable career opportunities
-                in the ever-thriving Salesforce field. Through campaigns and
-                events, we ignite curiosity and equip students with valuable
-                skills, democratizing tech education. More than a learning
-                platform, Coding Commando is a movement empowering youth and
-                businesses, bridging aspirations with opportunities.
-              </p>
+            <div className="max-w-2xl">
+              <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
+                About Coding Commando{" "}
+              </h5>
+              <div className="md:mt-10 mt-6 text-[20px]  flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
+                <p>
+                  Coding Commando, born from CloudPrism&apos;s challenges, is a
+                  pioneering platform bridging the gap in Salesforce talent.
+                  Founded by Prateek Prasoon, it empowers youth in small-town
+                  India with in-demand coding skills and Salesforce expertise.
+                  Our affordable, quality education addresses societal gaps in
+                  tech awareness, sparking a revolution within Bihar and beyond.
+                </p>
+                <p>
+                  With a global reach, we foster sustainable career
+                  opportunities in the ever-thriving Salesforce field. Through
+                  campaigns and events, we ignite curiosity and equip students
+                  with valuable skills, democratizing tech education. More than
+                  a learning platform, Coding Commando is a movement empowering
+                  youth and businesses, bridging aspirations with opportunities.
+                </p>
+              </div>
             </div>
           </div>
           <div className="flex-2">
@@ -258,16 +274,28 @@ const App = () => {
       <footer className="bg-[#000000] primary_container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           <div className="flex gap-2 md:gap-1.5">
-            <a className="">
+            <a
+              className=""
+              href="https://www.linkedin.com/in/mrprateek/"
+              target="_blank"
+            >
               <img src={lindeinLogo} alt="" className="size-8 md:size-9" />
             </a>
             <a className="">
               <img src={facebookLogo} alt="" className="size-8 md:size-9" />
             </a>
-            <a className="">
+            <a
+              className=""
+              href="https://twitter.com/PrateekPPrasoon"
+              target="_blank"
+            >
               <img src={twitterLogo} alt="" className="size-8 md:size-9" />
             </a>
-            <a className="">
+            <a
+              className=""
+              href="https://www.instagram.com/prateekprasoon22/"
+              target="_blank"
+            >
               <img src={instagramLogo} alt="" className="size-8 md:size-9" />
             </a>
           </div>
