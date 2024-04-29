@@ -1,14 +1,20 @@
 import prateekImg from "./assets/prateek-prasoon.png";
-import company1 from "./assets/company-1.svg";
-import company2 from "./assets/company-2.svg";
 import facebookLogo from "./assets/facebook-logo.svg";
 import instagramLogo from "./assets/instagram-logo.svg";
 import twitterLogo from "./assets/twitter-logo.svg";
+import lindeinLogo from "./assets/linkdein-logo.svg";
 import salesforceParnter from "./assets/salesforce-partner.png";
 import salesforceCup from "./assets/salesforce-cup.png";
 import codingCommando from "./assets/coding-commando.png";
 import reviewStar from "./assets/review-star.svg";
 import salesforceArchitect from "./assets/salesforce-architect.png";
+import company1 from "./assets/icons/icon-1.png";
+import company2 from "./assets/icons/icon-2.png";
+import company3 from "./assets/icons/icon-3.png";
+import company4 from "./assets/icons/icon-4.png";
+import company5 from "./assets/icons/icon-5.png";
+import company6 from "./assets/icons/icon-6.png";
+import footerImg from "./assets/footer-1.png";
 
 import { useState } from "react";
 
@@ -143,14 +149,22 @@ const App = () => {
           </div>
         </div>
 
-        <div className="py-20">
-          <img src={company1} alt="Companies" className="w-full" />
-          <img src={company2} alt="Companies" className="w-full" />
+        <div className="w-full flex flex-wrap justify-between my-10 ">
+          <img src={company1} alt="" className="object-contain" />
+          <img src={company2} alt="" className="object-contain" />
+          <img src={company3} alt="" className="object-contain" />
+          <img src={company4} alt="" className="object-contain" />
+          <img src={company5} alt="" className="object-contain" />
+          <img src={company6} alt="" className="object-contain" />
         </div>
       </section>
 
       <div className="w-full">
-        <img src={salesforceArchitect} alt="" className="w-full" />
+        <img
+          src={salesforceArchitect}
+          alt=""
+          className="w-full object-contain "
+        />
       </div>
 
       <section className="primary_container !bg-[#F9FEFF] ">
@@ -231,22 +245,39 @@ const App = () => {
 
       <ContactForm />
 
-      <section className="bg-[#2E2E2E] h-28 px-20 flex items-center">
-        <div className="flex gap-2">
-          <a className="size-9 bg-white rounded-full flex items-center justify-center">
-            <img src={facebookLogo} alt="" className="size-8" />
-          </a>
-          <a className="size-9 bg-white rounded-full flex items-center justify-center">
-            <img src={facebookLogo} alt="" className="size-8" />
-          </a>
-          <a className="size-9 bg-white rounded-full flex items-center justify-center">
-            <img src={twitterLogo} alt="" className="size-8" />
-          </a>
-          <a className="size-9 bg-white rounded-full flex items-center justify-center">
-            <img src={instagramLogo} alt="" className="size-8" />
-          </a>
+      <footer className="bg-[#000000] primary_container w-full h-44 flex">
+        <div className="flex gap-2.5">
+          <div className="flex-1 flex gap-2">
+            <a className="">
+              <img src={lindeinLogo} alt="" className="size-8 md:size-9" />
+            </a>
+            <a className="">
+              <img src={facebookLogo} alt="" className="size-8 md:size-9" />
+            </a>
+            <a className="">
+              <img src={twitterLogo} alt="" className="size-8 md:size-9" />
+            </a>
+            <a className="">
+              <img src={instagramLogo} alt="" className="size-8 md:size-9" />
+            </a>
+          </div>
+          <div className="flex-1 text-base text-white font-outFit font-normal">
+            <p>
+              Office no: 917, Gera Imperium Alpha, Rajaram Patil Nagar, Vitthal
+              Nagar, Kharadi, Pune, Maharashtra 411014 +91 7906582439
+            </p>
+          </div>
+          <div className="flex-1 text-base text-white font-outFit font-normal">
+            <p>
+              Shivpuri Rd, South Shivpuri, Shivpuri, Rajbansi Nagar, Patna,
+              Bihar 800029 +91 83295 53438
+            </p>
+          </div>
+          <div className="flex-1 text-base text-white font-outFit font-normal">
+            <p>701 Tillery St, Austin, TX 78702, United States +1 3015639221</p>
+          </div>
         </div>
-      </section>
+      </footer>
     </div>
   );
 };
