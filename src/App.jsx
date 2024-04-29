@@ -4,6 +4,11 @@ import company2 from "./assets/company-2.svg";
 import facebookLogo from "./assets/facebook-logo.svg";
 import instagramLogo from "./assets/instagram-logo.svg";
 import twitterLogo from "./assets/twitter-logo.svg";
+import salesforceParnter from "./assets/salesforce-partner.png";
+import salesforceCup from "./assets/salesforce-cup.png";
+import codingCommando from "./assets/coding-commando.png";
+import reviewStar from "./assets/review-star.svg";
+import salesforceArchitect from "./assets/salesforce-architect.png";
 
 import { useState } from "react";
 
@@ -31,6 +36,24 @@ const posts = [
     title: "CloudPrism Solutions",
     description:
       "Together, we navigate challenges, standing as pillars of support for one another through every triumph and trial.",
+  },
+];
+
+const reviews = [
+  {
+    id: 1,
+    description:
+      "“Pleasure to work with Prateek and team, will continue working with his team in future. Excellent service, great attention to detail and quick efficient turn around time.”",
+  },
+  {
+    id: 2,
+    description:
+      "“Prateek is one of the finest teachers I've met. The best part is he picks up the subjects from the root moulds it into a real life scenario and then explains which helps a lot in understanding the basic concepts and hence using it working live. I've been with him as a student and a friend and he stands out on both the grounds.”",
+  },
+  {
+    id: 3,
+    description:
+      "“Mentor,motivator and a helpful trainer are the words that are apt when it comes to Prateek Sir.Had a great experience learning Salesforce Development from him.Strongly recommend his training sessions to salesforce aspirants.”",
   },
 ];
 
@@ -126,56 +149,79 @@ const App = () => {
         </div>
       </section>
 
-      <section className="bg-[#2E2E2E] h-[430px] w-full primary_container flex justify-center sm:justify-start">
-        {/* <div className="size-[400px] bg-white rounded-[18px] "></div> */}
-        <div className="size-[350px] md:size-[450px] bg-white rounded-3xl md:-mt-20"></div>
+      <div className="w-full">
+        <img src={salesforceArchitect} alt="" className="w-full" />
+      </div>
+
+      <section className="primary_container !bg-[#F9FEFF] ">
+        <div className="flex flex-wrap justify-between my-8">
+          {reviews &&
+            reviews.map((item) => (
+              <ReviewCard key={item.id} description={item.description} />
+            ))}
+        </div>
       </section>
 
       <section className="primary_container">
         <div className="flex w-full flex-col lg:flex-row">
           <div className="flex-1">
             <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
-              How CloudPrism can help you?
+              About CloudPrism Solutions{" "}
             </h5>
             <div className="md:mt-10 mt-6 text-[20px]  flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
               <p>
-                CloudPrism Solutions isn&apos;t just a workplace—it&apos;s a
-                community. Here, you&apos;re not just an employee; you&apos;re a
-                valued member of a team united by shared values yet diverse in
-                our individuality.
+                Cloudprism stands out from the crowd of software startups.
+                Located in the heart of Patna City, India, we&apos;ve grown by
+                cultivating a vibrant community and delivering meaningfull
+                impact. With over 50 expert developers, we specialize in
+                Salesforce and Ful stack solutions,ensure custom results that
+                fit your needs and timeline.
               </p>
               <p>
-                Experience a culture of perpetual progress, where personal
-                growth is not just encouraged, but celebrated. Together, we
-                navigate challenges, standing as pillars of support for one
-                another through every triumph and trial.
+                Our strategy emphasizes sincere communication, integrity, and
+                openness. As a Salesforce Ridge Partner, we offer complete IT
+                solutions and Salesforce knowledge, enabling companies to
+                prosper in the digital environment.
               </p>
             </div>
           </div>
-          <div className="flex-1"></div>
+          <div className="flex-2">
+            <div className="w-full  flex flex-col items-end justify-center">
+              <img src={salesforceParnter} alt="" />
+              <img src={salesforceCup} alt="" />
+            </div>
+          </div>
         </div>
 
         <div className="flex w-full flex-col lg:flex-row mt-10">
-          <div className="flex-1">
+          <div className="flex-1 ">
             <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
-              How CloudPrism can help you?
+              About Coding Commando{" "}
             </h5>
             <div className="md:mt-10 mt-6 text-[20px]  flex flex-col gap-y-4 md:gap-y-6 text-[#4E4E4E] font-openSans">
               <p>
-                CloudPrism Solutions isn&apos;t just a workplace—it&apos;s a
-                community. Here, you&apos;re not just an employee; you&apos;re a
-                valued member of a team united by shared values yet diverse in
-                our individuality.
+                Coding Commando, born from CloudPrism&apos;s challenges, is a
+                pioneering platform bridging the gap in Salesforce talent.
+                Founded by Prateek Prasoon, it empowers youth in small-town
+                India with in-demand coding skills and Salesforce expertise. Our
+                affordable, quality education addresses societal gaps in tech
+                awareness, sparking a revolution within Bihar and beyond.
               </p>
               <p>
-                Experience a culture of perpetual progress, where personal
-                growth is not just encouraged, but celebrated. Together, we
-                navigate challenges, standing as pillars of support for one
-                another through every triumph and trial.
+                With a global reach, we foster sustainable career opportunities
+                in the ever-thriving Salesforce field. Through campaigns and
+                events, we ignite curiosity and equip students with valuable
+                skills, democratizing tech education. More than a learning
+                platform, Coding Commando is a movement empowering youth and
+                businesses, bridging aspirations with opportunities.
               </p>
             </div>
           </div>
-          <div className="flex-1"></div>
+          <div className="flex-2">
+            <div className="w-full  flex flex-col items-end justify-center">
+              <img src={codingCommando} alt="" />
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 flex flex-wrap justify-center gap-8 lg:gap-10 xl:gap-14  w-full ">
@@ -216,9 +262,6 @@ function PostItem({ title, description }) {
         <p className="text-[15px] text-[#4E4E4E] font-openSans">
           {description}
         </p>
-        <button className="bg-[#181818] rounded-[57px] text-white text-[17px] font-medium px-8 py-1.5 font-outFit">
-          Read
-        </button>
       </div>
     </div>
   );
@@ -313,6 +356,22 @@ function ContactForm() {
         </div>
       </form>
     </section>
+  );
+}
+
+function ReviewCard({ description }) {
+  return (
+    <div
+      className="bg-white max-w-sm  p-5 h-full rounded-[14px]"
+      style={{
+        boxShadow: "0px 4px 9px 0px #0000003D",
+      }}
+    >
+      <p className="text-xl font-outFit font-medium text-black">
+        {description}
+      </p>
+      <img src={reviewStar} alt="review-star" className="mt-6" />
+    </div>
   );
 }
 
