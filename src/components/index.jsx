@@ -1,3 +1,4 @@
+import { submitLeadToSalesforce } from "../../utils/sendLead";
 import reviewStar from "../assets/review-star.svg";
 import { useState } from "react";
 
@@ -14,14 +15,50 @@ export function ContactForm() {
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (event) => {
-    console.log("called");
     event.preventDefault();
+    console.log("Form submission called");
 
-    const formData = { name, number, email, message };
+    // Create formData object
+    const formData = {
+      firstName: name,
+      lastName: "",
+      email: email,
+      phone: number,
+      message: message,
+    };
+
     console.log(formData);
+
+    // Lead info object (example context)
+    const LeadInfo = {
+      leadType: "Case studies CTA",
+    };
+
+    try {
+      // Simulated function to submit data to an API or backend service
+      const response = await submitLeadToSalesforce(formData, LeadInfo);
+      console.log(response);
+
+      // Set success state and reset form if submission is successful
+      setIsSuccess(true);
+      setName("");
+      setNumber("");
+      setEmail("");
+      setMessage("");
+
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 5000);
+    } catch (error) {
+      // Handle errors if submission fails
+      console.error("Error submitting form: ", error);
+      setIsSuccess(false); // You might handle errors differently
+    }
   };
+
   return (
     <section className="primary_container !bg-[#F9FEFF] pt-6 md:pt-10">
       <h4 className="text-center text-3xl lg:text-[43px] font-semibold font-outFit">
@@ -88,6 +125,12 @@ export function ContactForm() {
             Submit
           </button>
         </div>
+
+        {isSuccess && (
+          <div className="text-sm text-center text-green-500 font-outFit font-semibold mt-4">
+            <p>Thanks for your submission! We&apos;ll be in touch shortly.</p>
+          </div>
+        )}
       </form>
     </section>
   );
