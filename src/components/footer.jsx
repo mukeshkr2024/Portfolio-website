@@ -23,7 +23,7 @@ export const Footer = () => {
             >
               <img src={lindeinLogo} alt="" className="size-8 md:size-9" />
             </a>
-            <a className="">
+            <a href="https://www.facebook.com/prateekprasoonn" target="_blank">
               <img src={facebookLogo} alt="" className="size-8 md:size-9" />
             </a>
             <a
@@ -61,8 +61,8 @@ export const Footer = () => {
           <p>
             Shivpuri Rd, South Shivpuri, Shivpuri, Rajbansi Nagar, Patna, Bihar
             800029 <br />
-            +91 83295 53438 ,{" "}
-            <a href="mailto:prateek@cloudprism.in">prateek@cloudprism.in</a>
+            <a href="mailto:prateek@cloudprism.in">prateek@cloudprism.in, </a>
+            +91 83295 53438{" "}
           </p>
         </div>
         <div className="flex-1 text-base text-white font-outFit font-normal">

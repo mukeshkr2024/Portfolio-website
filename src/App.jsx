@@ -57,7 +57,7 @@ const App = () => {
       <CompanySection />
 
       <ContactForm />
-      {/* <div className="bg-[#29A7FF] w-full h-5 border-t-2 border-black"></div> */}
+      <div className="bg-[#29A7FF] w-full h-5 border-t-2 border-black"></div>
       <Footer />
     </div>
   );

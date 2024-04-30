@@ -20,9 +20,9 @@ export const CompanySection = () => {
               <p>
                 Cloudprism stands out from the crowd of software startups.
                 Located in the heart of Patna City, India, we&apos;ve grown by
-                cultivating a vibrant community and delivering meaningfull
+                cultivating a vibrant community and delivering meaningful
                 impact. With over 50 expert developers, we specialize in
-                Salesforce and Ful stack solutions,ensure custom results that
+                Salesforce and Full stack solutions, ensure custom results that
                 fit your needs and timeline.
               </p>
               <p>
@@ -111,7 +111,7 @@ export const CompanySection = () => {
             </h3>
             <p className="text-[15px] text-[#4E4E4E] font-openSans">
               WIT was a technical event hosted by the founders Neetu Bansal and
-              Kyati Mehta for the salesforce community regarding empowering the
+              Kyati Mehta for the salesforce community regarding empowering
               women in tech souls. I attended, made connections, and discussed
               Salesforce.{" "}
             </p>
@@ -130,7 +130,7 @@ export const CompanySection = () => {
               Youth DreamIn, Bihar{" "}
             </h3>
             <p className="text-[15px] text-[#4E4E4E] font-openSans">
-              Youth DreamIn,a CloudPrism Solutions initiative in Bihar&apos;s
+              Youth DreamIn, a CloudPrism Solutions initiative in Bihar&apos;s
               capital, aimed to raise Salesforce awareness among youth on
               International Youth Day with Patna Salesforce Community guidance.{" "}
             </p>

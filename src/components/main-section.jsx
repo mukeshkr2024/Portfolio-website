@@ -38,10 +38,10 @@ export const MainSection = () => {
                 Bridging your career gaps with Salesforce, every day.{" "}
               </h4>
               <p className="text-lg font-openSans text-[#4E4E4E]">
-                Your primary company needs—increasing income, reducing expenses,
-                and maximizing time—are something I understand. In addition to
-                teaching business acumen, I&apos;m committed to raising
-                Salesforce awareness for long-term success.
+                Your primary company needs- increasing income, reducing
+                expenses, and maximizing time- is something I understand. In
+                addition to teaching business acumen, I&apos;m committed to
+                raising Salesforce awareness for long-term success.
               </p>
               <div className="flex w-full items-start gap-6 font-openSans">
                 <button
