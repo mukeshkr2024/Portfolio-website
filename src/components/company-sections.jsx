@@ -1,5 +1,5 @@
 import codingCommando from "../assets/coding-commando.png";
-import salesforceCup from "../assets/salesforce-cup.png";
+// import salesforceCup from "../assets/salesforce-cup.png";
 import salesforceParnter from "../assets/salesforce-partner.png";
 import womenInTech from "../assets/women-in-tech.png";
 import youthBihar from "../assets/youth-bihar.png";
@@ -33,15 +33,16 @@ export const CompanySection = () => {
             </div>
           </div>
         </div>
-        <div className="flex-2 ">
-          <div className="w-full flex flex-col items-center lg:items-end justify-center">
-            <img src={salesforceParnter} alt="" className="object-contain" />
-            <img src={salesforceCup} alt="" className="object-contain" />
+        <div className="flex-2">
+          <div className="w-full h-full items-center flex justify-end">
+            <a href="https://cloudprism.in/" target="_blank">
+              <img src={salesforceParnter} alt="" className="object-contain" />
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="flex w-full flex-col gap-y-8 lg:flex-row mt-6 md:mt-10">
+      <div className="flex w-full flex-col gap-y-8 lg:flex-row mt-14 md:mt-10">
         <div className="flex-1 ">
           <div className="max-w-2xl">
             <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
@@ -67,24 +68,27 @@ export const CompanySection = () => {
             </div>
           </div>
         </div>
+
         <div className="flex-2">
-          <div className="w-full flex flex-col lg:items-end justify-center">
-            <img src={codingCommando} alt="" className="object-contain" />
+          <div className="w-full h-full items-center flex justify-end">
+            <a href="https://codingcommando.in/" target="_blank">
+              <img src={codingCommando} alt="" className="object-contain" />
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="text-center mt-20">
-        <h4 className="text-[50px] text-[#181818] font-semibold font-outFit">
+      <div className="text-center md:mt-20 mt-14">
+        <h4 className="md:text-[50px] text-4xl text-[#181818] font-semibold font-outFit">
           Educating the young India
         </h4>
-        <span className="text-[38px] font-semibold font-outFit text-[#9F9F9F]">
+        <span className="md:text-[38px] text-3xl font-semibold font-outFit text-[#9F9F9F]">
           {" "}
           Join me...
         </span>
       </div>
 
-      <div className="mt-16 flex flex-wrap justify-center gap-8 lg:gap-10 xl:gap-14  w-full ">
+      <div className="md:mt-16 mt-10 flex flex-wrap justify-center gap-8 lg:gap-10 xl:gap-14  w-full ">
         <div className="w-[260px]">
           <div className="w-full h-[175px] rounded-[14px]">
             <img

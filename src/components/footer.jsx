@@ -2,6 +2,7 @@ import facebookLogo from "../assets/facebook.png";
 import instagramLogo from "../assets/instagram.png";
 import lindeinLogo from "../assets/linkdein.png";
 import twitterLogo from "../assets/twitter.png";
+import mailLogo from "../assets/icons/mail.png";
 
 export const Footer = () => {
   return (
@@ -33,7 +34,9 @@ export const Footer = () => {
             >
               <img src={instagramLogo} alt="" className="size-8 md:size-9" />
             </a>
-            2
+            <a href="mailto:prateek@cloudprism.in">
+              <img src={mailLogo} alt="" className="size-8 md:size-9" />
+            </a>
           </div>
           <div className="text-white flex flex-col font-outFit font-normal mt-3 gap-1.5">
             <a href="https://cloudprism.in" target="_blank">

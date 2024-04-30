@@ -30,7 +30,7 @@ export const MainSection = () => {
         </button>
       </div>
 
-      <div className="flex justify-center h-full items-start py-14">
+      <div className="flex justify-center h-full items-start md:py-14 py-10">
         <div className="flex flex-col lg:flex-row w-full  h-auto ">
           <div className="flex-1">
             <div className="max-w-lg flex flex-col lg:gap-y-6 gap-y-6">
@@ -51,7 +51,9 @@ export const MainSection = () => {
                     transform: "translate(2px, 2px)",
                   }}
                 >
-                  Book a call
+                  <a href="https://cloudprism.in/contact-us" target="_blank">
+                    Book a call
+                  </a>
                 </button>
                 <button
                   className="lg:w-[180px] w-[160px] h-[50px] lg:h-[55px] border-2 border-[#04080A] text-base lg:text-xl font-bold rounded-[50px]"
@@ -60,7 +62,7 @@ export const MainSection = () => {
                     transform: "translate(2px, 2px)",
                   }}
                 >
-                  Our Courses
+                  <a href="https://codingcommando.in/courses">Our Courses</a>
                 </button>
               </div>
             </div>

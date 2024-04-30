@@ -41,7 +41,7 @@ const App = () => {
         />
       </div>
 
-      <section className="primary_container !bg-[#F9FEFF] ">
+      <section className="primary_container !bg-[#F9FEFF]">
         <div className="flex flex-wrap justify-between gap-8 my-2 md:my-8">
           {reviews &&
             reviews.map((item) => (
