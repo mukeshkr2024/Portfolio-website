@@ -1,5 +1,4 @@
 export async function submitLeadToSalesforce(leadValues, leadConfig) {
-  console.log(leadValues, leadConfig);
   const url =
     "https://cloudprismsolutionpvtltd.my.salesforce-sites.com/services/apexrest/createLeadCP";
 
@@ -34,7 +33,6 @@ export async function submitLeadToSalesforce(leadValues, leadConfig) {
 
     const result = await response.json();
 
-    console.log("Submission Successful:", result);
     return result;
   } catch (error) {
     console.error("Error submitting form to Salesforce:", error.message);

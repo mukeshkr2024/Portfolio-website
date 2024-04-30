@@ -17,10 +17,10 @@ export function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isloading, setIsloading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Form submission called");
 
     // Create formData object
     const formData = {
@@ -31,32 +31,34 @@ export function ContactForm() {
       message: message,
     };
 
-    console.log(formData);
-
     // Lead info object (example context)
     const LeadInfo = {
       leadType: "Case studies CTA",
     };
 
     try {
+      setIsloading(true);
+
       // Simulated function to submit data to an API or backend service
       const response = await submitLeadToSalesforce(formData, LeadInfo);
       console.log(response);
 
-      // Set success state and reset form if submission is successful
-      setIsSuccess(true);
       setFirstName("");
+      setLastName("");
       setNumber("");
       setEmail("");
       setMessage("");
+      setIsSuccess(true);
 
       setTimeout(() => {
         setIsSuccess(false);
       }, 5000);
     } catch (error) {
       // Handle errors if submission fails
-      console.error("Error submitting form: ", error);
       setIsSuccess(false); // You might handle errors differently
+      setIsloading(false);
+    } finally {
+      setIsloading(false);
     }
   };
 
@@ -134,6 +136,7 @@ export function ContactForm() {
               boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
               transform: "translate(2px, 2px)",
             }}
+            disabled={isloading}
           >
             Submit
           </button>
