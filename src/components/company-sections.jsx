@@ -12,7 +12,7 @@ export const CompanySection = () => {
     <section className="primary_container !bg-[#F9FEFF]">
       <div className="flex w-full flex-col lg:flex-row gap-y-8">
         <div className="flex-1">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
               About CloudPrism Solutions{" "}
             </h5>
@@ -35,17 +35,21 @@ export const CompanySection = () => {
           </div>
         </div>
         <div className="flex-2">
-          <div className="w-full h-full items-center flex justify-end">
-            <a href="https://cloudprism.in/" target="_blank">
-              <img src={cloudprismLogo} alt="" className="object-contain" />
+          <div className="w-full h-full items-center flex justify-center lg:justify-end">
+            <a
+              href="https://cloudprism.in/"
+              target="_blank"
+              className="w-[55%] lg:w-[80%]"
+            >
+              <img src={cloudprismLogo} alt="" className="object-contain " />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="flex w-full flex-col gap-y-8 lg:flex-row mt-14 md:mt-10">
+      <div className="flex w-full flex-col gap-y-8 lg:flex-row mt-16 md:mt-10">
         <div className="flex-1 ">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <h5 className="lg:text-[50px] text-4xl md:text-5xl font-semibold font-outFit">
               About Coding Commando{" "}
             </h5>
@@ -71,15 +75,19 @@ export const CompanySection = () => {
         </div>
 
         <div className="flex-2">
-          <div className="w-full h-full items-center flex justify-end">
-            <a href="https://codingcommando.in/" target="_blank">
+          <div className="w-full h-full items-center flex justify-center lg:justify-end">
+            <a
+              href="https://codingcommando.in/"
+              target="_blank"
+              className="w-[55%] lg:w-[80%]"
+            >
               <img src={codingCommando} alt="" className="object-contain" />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="text-center md:mt-20 mt-14 flex flex-col gap-y-2 md:gap-y-4">
+      <div className="text-center md:mt-20  mt-14 flex flex-col gap-y-2 md:gap-y-4">
         <h4 className="text-4xl md:text-5xl text-[#181818] font-semibold font-outFit">
           Educating the young India
         </h4>

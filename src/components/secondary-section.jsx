@@ -47,13 +47,37 @@ export const SecondarySection = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-wrap justify-between md:mt-10 mt-10 gap-3 ">
-        <img src={company1} alt="" className="object-contain" />
-        <img src={company2} alt="" className="object-contain" />
-        <img src={company3} alt="" className="object-contain" />
-        <img src={company4} alt="" className="object-contain" />
-        <img src={company5} alt="" className="object-contain" />
-        <img src={company6} alt="" className="object-contain" />
+      <div className="w-full grid grid-cols-3 md:grid-cols-6 mt-10 ">
+        <img
+          src={company1}
+          alt=""
+          className="object-contain size-20 sm:size-24 lg:size-28"
+        />
+        <img
+          src={company2}
+          alt=""
+          className="object-contain size-20 sm:size-24 lg:size-28"
+        />
+        <img
+          src={company3}
+          alt=""
+          className="object-contain size-20 sm:size-24 lg:size-28"
+        />
+        <img
+          src={company4}
+          alt=""
+          className="object-contain size-20 sm:size-24 lg:size-28"
+        />
+        <img
+          src={company5}
+          alt=""
+          className="object-contain size-20 lg:size-28"
+        />
+        <img
+          src={company6}
+          alt=""
+          className="object-contain size-20 lg:size-28"
+        />
       </div>
     </section>
   );

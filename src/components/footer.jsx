@@ -3,10 +3,16 @@ import instagramLogo from "../assets/instagram.png";
 import lindeinLogo from "../assets/linkdein.png";
 import twitterLogo from "../assets/twitter.png";
 import mailLogo from "../assets/icons/mail.png";
+// import background from "../assets/footer-bg.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#000000] primary_container">
+    <footer
+      className="bg-[#000000] primary_container"
+      // style={{
+      //   backgroundImage: `url(${background})`,
+      // }}
+    >
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         <div>
           <div className="flex gap-2 md:gap-1.5">
