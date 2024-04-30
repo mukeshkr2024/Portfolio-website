@@ -37,8 +37,8 @@ export const SecondarySection = () => {
         </div>
 
         <div className="flex-1 flex justify-center">
-          <div className="bg-[#F9FEFF] w-[458px] mt-10 lg:-mt-10 rounded-t-[17px] md:rounded-t-none rounded-b-[17px] h-[400px] md:h-[450px] flex items-center justify-center md:px-12 px-8">
-            <h5 className="md:text-[34px] text-3xl font-outFit font-semibold">
+          <div className="bg-[#F9FEFF] w-[458px] mt-10 lg:-mt-10 rounded-t-[17px] md:rounded-t-none rounded-b-[17px] h-[400px] md:h-[460px] flex items-center justify-center md:px-12 px-8">
+            <h5 className=" text-3xl md:text-[38px] md:leading-[49.4px] font-outFit font-semibold">
               “I, who doesn&apos;t just shape careers; shapes destinies,
               inspiring individuals to dream big and reach beyond their
               perceived limitations.”
@@ -47,7 +47,7 @@ export const SecondarySection = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-wrap justify-between md:my-10 mt-10 gap-3 ">
+      <div className="w-full flex flex-wrap justify-between md:mt-10 mt-10 gap-3 ">
         <img src={company1} alt="" className="object-contain" />
         <img src={company2} alt="" className="object-contain" />
         <img src={company3} alt="" className="object-contain" />

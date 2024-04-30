@@ -1,6 +1,7 @@
 import codingCommando from "../assets/coding-commando.png";
 // import salesforceCup from "../assets/salesforce-cup.png";
-import salesforceParnter from "../assets/salesforce-partner.png";
+// import salesforceParnter from "../assets/salesforce-partner.png";
+import cloudprismLogo from "../assets/cloudprism.png";
 import womenInTech from "../assets/women-in-tech.png";
 import youthBihar from "../assets/youth-bihar.png";
 import mcSquare from "../assets/mc-square.png";
@@ -36,7 +37,7 @@ export const CompanySection = () => {
         <div className="flex-2">
           <div className="w-full h-full items-center flex justify-end">
             <a href="https://cloudprism.in/" target="_blank">
-              <img src={salesforceParnter} alt="" className="object-contain" />
+              <img src={cloudprismLogo} alt="" className="object-contain" />
             </a>
           </div>
         </div>
@@ -78,12 +79,11 @@ export const CompanySection = () => {
         </div>
       </div>
 
-      <div className="text-center md:mt-20 mt-14">
-        <h4 className="md:text-[50px] text-4xl text-[#181818] font-semibold font-outFit">
+      <div className="text-center md:mt-20 mt-14 flex flex-col gap-y-2 md:gap-y-4">
+        <h4 className="text-4xl md:text-5xl text-[#181818] font-semibold font-outFit">
           Educating the young India
         </h4>
-        <span className="md:text-[38px] text-3xl font-semibold font-outFit text-[#9F9F9F]">
-          {" "}
+        <span className="text-3xl md:text-4xl font-semibold font-outFit text-[#9F9F9F]">
           Join me...
         </span>
       </div>
