@@ -51,7 +51,8 @@ const testValues = {
 };
 
 const testLeadInfo = {
-  leadType: "Prateek Prasoon Portfolio",
+  // leadType: "Prateek Prasoon Portfolio",
+  leadType: "Case studies CTA",
 };
 
 submitLeadToSalesforce(testValues, testLeadInfo);

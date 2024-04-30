@@ -11,7 +11,8 @@ export function InputBtn({ label }) {
 }
 
 export function ContactForm() {
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -23,8 +24,8 @@ export function ContactForm() {
 
     // Create formData object
     const formData = {
-      firstName: name,
-      lastName: "",
+      firstName: firstName,
+      lastName: lastName,
       email: email,
       phone: number,
       message: message,
@@ -44,7 +45,7 @@ export function ContactForm() {
 
       // Set success state and reset form if submission is successful
       setIsSuccess(true);
-      setName("");
+      setFirstName("");
       setNumber("");
       setEmail("");
       setMessage("");
@@ -72,35 +73,47 @@ export function ContactForm() {
       >
         <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-6">
           <div className="flex-1 flex gap-4">
-            <InputBtn label="Name" />
+            <InputBtn label="First Name" />
             <input
               type="text"
-              value={name}
+              value={firstName}
               required
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setFirstName(e.target.value)}
               className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
             />
           </div>
           <div className="flex-1 flex gap-4">
-            <InputBtn label="Number" />
+            <InputBtn label="Last Name" />
             <input
               type="text"
               required
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
             />
           </div>
         </div>
-        <div className="flex-1 flex gap-4">
-          <InputBtn label="Email" />
-          <input
-            type="email"
-            value={email}
-            required
-            onChange={(e) => setEmail(e.target.value)}
-            className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
-          />
+        <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-6">
+          <div className="flex-1 flex gap-4">
+            <InputBtn label="Phone" />
+            <input
+              type="text"
+              value={number}
+              required
+              onChange={(e) => setNumber(e.target.value)}
+              className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
+            />
+          </div>
+          <div className="flex-1 flex gap-4">
+            <InputBtn label="Email" />
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border border-[#181818] h-[42px] w-full rounded-[57px] flex-1 px-4"
+            />
+          </div>
         </div>
         <div className="flex-1 flex gap-4">
           <InputBtn label="Message" />
