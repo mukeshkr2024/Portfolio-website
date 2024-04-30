@@ -42,7 +42,7 @@ const App = () => {
       </div>
 
       <section className="primary_container !bg-[#F9FEFF]">
-        <div className="flex flex-wrap justify-between gap-8 my-2 md:my-8">
+        <div className="flex flex-wrap justify-center gap-x-8 xl:gap-x-0  xl:justify-between gap-y-8 my-2 md:my-8">
           {reviews &&
             reviews.map((item) => (
               <ReviewCard

@@ -55,7 +55,8 @@ export const Footer = () => {
           <p>
             Shivpuri Rd, South Shivpuri, Shivpuri, Rajbansi Nagar, Patna, Bihar
             800029 <br />
-            +91 83295 53438
+            +91 83295 53438 ,{" "}
+            <a href="mailto:prateek@cloudprism.in">prateek@cloudprism.in</a>
           </p>
         </div>
         <div className="flex-1 text-base text-white font-outFit font-normal">

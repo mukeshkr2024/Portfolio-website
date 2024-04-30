@@ -62,7 +62,9 @@ export const MainSection = () => {
                     transform: "translate(2px, 2px)",
                   }}
                 >
-                  <a href="https://codingcommando.in/courses">Our Courses</a>
+                  <a href="https://codingcommando.in/courses" target="_blank">
+                    Our Courses
+                  </a>
                 </button>
               </div>
             </div>
