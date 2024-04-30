@@ -33,7 +33,8 @@ export function ContactForm() {
 
     // Lead info object (example context)
     const LeadInfo = {
-      leadType: "Case studies CTA",
+      // leadType: "Case studies CTA",
+      leadType: "Prateek Prasoon Portfolio",
     };
 
     try {
