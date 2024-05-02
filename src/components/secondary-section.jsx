@@ -10,9 +10,9 @@ export const SecondarySection = () => {
     <section className="bg-[#F3F3F1] w-full primary_container ">
       <div className="w-full flex flex-col lg:flex-row">
         <div className="flex-1">
-          <h5 className="text-[#000000] lg:text-[48px] text-[35px] font-medium font-outFit">
+          <h1 className="text-[#000000] lg:text-[48px] text-[35px] font-medium font-outFit">
             Prateek Prasoon{" "}
-          </h5>
+          </h1>
           <div className="text-[19px] font-normal mt-4 lg:mt-10 flex flex-col gap-y-6 text-[#4E4E4E] font-openSans">
             <p>
               With over ten years of practical experience, I am a 9X CERTIFIED

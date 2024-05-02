@@ -34,9 +34,9 @@ export const MainSection = () => {
         <div className="flex flex-col lg:flex-row w-full  h-auto ">
           <div className="flex-1">
             <div className="max-w-lg flex flex-col lg:gap-y-6 gap-y-6">
-              <h4 className="lg:text-[53px] text-5xl font-semibold font-outFit lg:leading-[71.4px]">
+              <h2 className="lg:text-[53px] text-5xl font-semibold font-outFit lg:leading-[71.4px]">
                 Bridging your career gaps with Salesforce, every day.{" "}
-              </h4>
+              </h2>
               <p className="text-lg font-openSans text-[#4E4E4E]">
                 Your primary company needs- increasing income, reducing
                 expenses, and maximizing time- is something I understand. In
