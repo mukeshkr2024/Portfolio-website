@@ -21,10 +21,10 @@ export const SecondarySection = () => {
               Salesforce instances to meet their specific needs.
             </p>
             <p>
-              I&apos;m here to help, whether you need a Salesforce developer,
-              consultant, administrator, or architect. I promise to provide
-              excellent work on schedule. Isolation and specialization are out
-              of style in the current digital world. Together, taking in
+              Prateek prasoon is here to help, whether you need a Salesforce
+              developer, consultant, administrator, or architect. I promise to
+              provide excellent work on schedule. Isolation and specialization
+              are out of style in the current digital world. Together, taking in
               progress is the new standard.
             </p>
             <p>
