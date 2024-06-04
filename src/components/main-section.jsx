@@ -1,35 +1,11 @@
 import sign from "../assets/sign.svg";
 import prateekImg from "../assets/prateek-prasoon.png";
+import { Link } from "react-router-dom";
 
 export const MainSection = () => {
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
-  };
   return (
     <section className="lg:h-[750px] primary_container ">
-      <div className=" h-24 w-full flex justify-between items-start">
-        <img
-          src={sign}
-          alt="Prateek Prasoon"
-          className="w-[150px] sm:w-[180px] md:w-[230px] lg:w-[300px]"
-        />
-        <button
-          className="bg-[#181818] rounded-[50px]"
-          style={{
-            boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
-            transform: "translate(2px, 2px)",
-          }}
-          onClick={scrollToBottom}
-        >
-          <p className="lg:text-xl font-openSans text-white font-bold sm:py-2.5 lg:px-10 px-6 py-2 ">
-            Reach out
-          </p>
-        </button>
-      </div>
-
+      <Navbar />
       <div className="flex justify-center h-full items-start md:py-14 py-10">
         <div className="flex flex-col lg:flex-row w-full  h-auto ">
           <div className="flex-1">
@@ -79,5 +55,45 @@ export const MainSection = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+export const Navbar = () => {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+  return (
+    <div className=" h-24 w-full flex justify-between items-start">
+      <Link to="/">
+        <img
+          src={sign}
+          alt="Prateek Prasoon"
+          className="w-[150px] sm:w-[180px] md:w-[230px] lg:w-[300px]"
+        />
+      </Link>
+
+      <div className="flex items-center gap-x-10">
+        <Link to="/blogs">
+          <button className="bg-[#181818] lg:text-lg text-white py-1.5 px-6 rounded-[50px] font-normal">
+            Blogs
+          </button>
+        </Link>
+        <button
+          className="bg-[#181818] rounded-[50px]"
+          style={{
+            boxShadow: "#fff 4px 5px 0 0, #000 4px 5px 0 1.5px",
+            transform: "translate(2px, 2px)",
+          }}
+          onClick={scrollToBottom}
+        >
+          <p className="lg:text-xl font-openSans text-white font-bold sm:py-2 lg:px-10 px-6 py-2 ">
+            Reach out
+          </p>
+        </button>
+      </div>
+    </div>
   );
 };

@@ -11,4 +11,7 @@
   .primary_container {
     @apply px-6 sm:px-12 md:px-16 xl:px-24 py-10;
   }
+  .primary_paragraph {
+    @apply text-[#292929] font-normal py-3;
+  }
 }
